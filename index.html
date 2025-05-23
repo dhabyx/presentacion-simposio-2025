@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pensar como arquitecto, construir como aprendiz</title>
+
+  <!-- Importar estilos de Reveal.js -->
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="node_modules/reveal.js/dist/theme/black.css">
+
+  <!-- Estilos personalizados -->
+  <style>
+    .title-part1 { color: #4ecdc4; } /* Verde azulado para "Pensar como arquitecto" */
+    .title-part2 { color: #ff6b6b; } /* Rojo suave para "construir como aprendiz" */
+
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .column {
+      flex: 1;
+      padding: 0 20px;
+      text-align: left;
+    }
+
+    .highlight {
+      color: #ffe66d;
+      font-weight: bold;
+    }
+
+    .experience {
+      margin: 15px 0;
+      cursor: pointer;
+    }
+
+    .experience-title {
+      font-weight: bold;
+      color: #4ecdc4;
+    }
+
+    .experience-content {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #ddd;
+    }
+
+    .key-phrase {
+      font-size: 1.3em;
+      color: #ff6b6b;
+      font-style: italic;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Diapositiva 1: Título Inicial -->
+      <section>
+        <h1><span class="title-part1">Pensar como arquitecto,</span><br><span class="title-part2">construir como aprendiz</span></h1>
+        <h3>Presentado por: [Tu Nombre]</h3>
+        <p style="font-size: 0.7em; margin-top: 40px; font-style: italic; max-width: 80%; margin-left: auto; margin-right: auto;">
+          ¿Alguna vez se han preguntado si el código que escriben hoy tendrá un impacto positivo o negativo en el mundo de mañana? Esta charla no es una clase, es una conversación real sobre experiencias técnicas con impacto humano. Quiero compartir un viaje, mis errores, mis aprendizajes, y cómo llegué a entender que la arquitectura de software no es un rol, sino una mentalidad que todos podemos adoptar.
+        </p>
+      </section>
+
+      <!-- Diapositiva 2: ¿Recuerdas tu primer sistema? -->
+      <section>
+        <h2>¿Recuerdas tu primer sistema?</h2>
+        <p>Mi primer gran proyecto fue un sistema de permisos en C++ y MySQL.<br>Al principio, ¡orgullo puro! Pero pronto...</p>
+
+        <div class="columns">
+          <div class="column">
+            <h3>Torre de Jenga Inestable</h3>
+            <p>Un sistema que se tambalea constantemente,<br>frágil ante el más mínimo cambio.</p>
+          </div>
+          <div class="column">
+            <h3>Un Frankenstein de Código</h3>
+            <p>Parches sobre parches, piezas incompatibles<br>unidas a la fuerza, caótico e inmanejable.</p>
+          </div>
+        </div>
+
+        <p class="key-phrase">No era un sistema de permisos… era una trampa para desarrolladores.</p>
+      </section>
+
+      <!-- Diapositiva 3: Lo que aprendí del caos -->
+      <section>
+        <h2>Lo que aprendí del caos</h2>
+
+        <ul>
+          <li><strong>Falta de documentación:</strong> "Nadie más entendía el código, ni siquiera yo después de un tiempo. ¡Horas descifrando mis propios jeroglíficos!"</li>
+          <li><strong>Rigidez:</strong> "El sistema era un campo minado. Un pequeño cambio y ¡boom!, fallos inesperados. Nos convertimos en esclavos del sistema."</li>
+          <li><strong>Escalabilidad ignorada:</strong> "Funcionaba para 100 usuarios, ¿pero para 1000? ¿Y si los datos se multiplicaban por diez? Tuvimos que reescribir partes enteras."</li>
+          <li><strong>Miedo a tocar el código:</strong> "El código era tan complejo que daba miedo modificarlo. Parches sobre parches, y la deuda técnica creciendo como una bomba de tiempo."</li>
+        </ul>
+
+        <p class="key-phrase">Si tú no puedes leer tu código después de 6 meses… nadie podrá hacerlo.</p>
+      </section>
+
+      <!-- Diapositiva 4: De aprendiz a arquitecto -->
+      <section>
+        <h2>De aprendiz a arquitecto</h2>
+
+        <div class="columns">
+          <div class="column">
+            <h3>Mentalidad de Aprendiz</h3>
+            <ul>
+              <li>Enfocado en el 'ahora', que compile.</li>
+              <li>Documentación como tarea secundaria.</li>
+              <li>Visión centrada en su pieza de código.</li>
+              <li>Se enamora de su solución.</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h3>Mentalidad de Arquitecto</h3>
+            <ul>
+              <li>Piensa en el 'mañana': mantenibilidad, escalabilidad.</li>
+              <li>Documentación como puente esencial.</li>
+              <li>Visión holística del sistema y su impacto.</li>
+              <li>Se enamora del problema y la mejor forma de resolverlo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 30px;">Experiencias Clave</h3>
+        <div class="columns" style="font-size: 0.8em;">
+          <div class="column">
+            <div class="experience" onclick="this.querySelector('.experience-content').style.display = this.querySelector('.experience-content').style.display === 'none' ? 'block' : 'none';">
+              <div class="experience-title">Patrones de Diseño</div>
+              <div class="experience-content">Un vocabulario para soluciones probadas y comunicación eficiente. Me abrió los ojos a la elegancia del código.</div>
+            </div>
+            <div class="experience" onclick="this.querySelector('.experience-content').style.display = this.querySelector('.experience-content').style.display === 'none' ? 'block' : 'none';">
+              <div class="experience-title">Redes (CCNA)</div>
+              <div class="experience-content">Visión de interconectividad, escalabilidad e infraestructura. Dejé de ver la red como una caja negra.</div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="experience" onclick="this.querySelector('.experience-content').style.display = this.querySelector('.experience-content').style.display === 'none' ? 'block' : 'none';">
+              <div class="experience-title">UX (Experiencia Usuario)</div>
+              <div class="experience-content">El código sin diseño centrado en el usuario no sirve de mucho. La usabilidad es tan importante como la funcionalidad.</div>
+            </div>
+            <div class="experience" onclick="this.querySelector('.experience-content').style.display = this.querySelector('.experience-content').style.display === 'none' ? 'block' : 'none';">
+              <div class="experience-title">Emprendimiento</div>
+              <div class="experience-content">Valor de negocio, tipos de usuarios y decisiones estratégicas. El código es un medio, no un fin.</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="key-phrase">Si hoy no sientes un poco de vergüenza al ver el código que escribiste hace 6 meses, tenemos un problema.</p>
+      </section>
+
+      <!-- Diapositiva 5: Los errores que todos repetimos -->
+      <section>
+        <h2>Los errores que todos repetimos</h2>
+
+        <ul class="error-list">
+          <li class="error-item" onclick="this.classList.toggle('checked')">
+            <div class="error-title">
+              <span class="error-icon">📝</span> No documentar
+            </div>
+            <div class="error-description">
+              "Creer que te vas a acordar. Nunca te acuerdas. Y tu compañero te odiará."
+            </div>
+          </li>
+
+          <li class="error-item" onclick="this.classList.toggle('checked')">
+            <div class="error-title">
+              <span class="error-icon">🪂</span> No planear rollback
+            </div>
+            <div class="error-description">
+              "Implementar algo sin saber cómo volver atrás si todo explota. Es como saltar de un avión sin paracaídas de repuesto."
+            </div>
+          </li>
+
+          <li class="error-item" onclick="this.classList.toggle('checked')">
+            <div class="error-title">
+              <span class="error-icon">💘</span> Enamorarse de soluciones
+            </div>
+            <div class="error-description">
+              "Mi código es perfecto, mi algoritmo es el mejor... hasta que te das cuenta que hay una solución más simple, más barata y que el negocio realmente necesita."
+            </div>
+          </li>
+
+          <li class="error-item" onclick="this.classList.toggle('checked')">
+            <div class="error-title">
+              <span class="error-icon">👤</span> Olvidar al usuario final
+            </div>
+            <div class="error-description">
+              "Construir sistemas que funcionan técnicamente, pero que nadie quiere usar. ¿De qué sirve?"
+            </div>
+          </li>
+
+          <li class="error-item" onclick="this.classList.toggle('checked')">
+            <div class="error-title">
+              <span class="error-icon">💼</span> Desestimar el negocio
+            </div>
+            <div class="error-description">
+              "Pensar que 'lo de negocio' no te incumbe. Tu código es una herramienta para resolver un problema de negocio. Si no entiendes el problema, ¿cómo vas a construir la solución?"
+            </div>
+          </li>
+        </ul>
+
+        <p class="key-phrase">No tropezar dos veces… sin documentarlo antes.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Scripts de Reveal.js -->
+  <script src="node_modules/reveal.js/dist/reveal.js"></script>
+  <script src="node_modules/reveal.js/plugin/notes/notes.js"></script>
+  <script src="node_modules/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="node_modules/reveal.js/plugin/highlight/highlight.js"></script>
+  <script>
+    // Inicialización de Reveal.js
+    Reveal.initialize({
+      // Opciones de configuración
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Plugins
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
+</html>
