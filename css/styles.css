@@ -30,7 +30,7 @@
 }
 
 .experience-content {
-    display: none;
+    display: block;
     margin-top: 10px;
     font-size: 0.9em;
     color: #ddd;
@@ -74,7 +74,7 @@
 .error-icon {
     display: inline-block;
     width: 25px;
-    margin-right: 10px;
+    margin-right: 35px;
     text-align: center;
     transition: transform 0.3s;
 }

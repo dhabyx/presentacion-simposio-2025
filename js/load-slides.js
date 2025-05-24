@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         'slides/slide6.html', // Pensar como arquitecto hoy
         'slides/slide7.html',  // El sistema y el negocio: una pareja inseparable
         'slides/slide8.html',
-        'slides/slide9.html',
         'slides/slide10.html',
         'slides/slide11.html',
         'slides/slide12.html'
