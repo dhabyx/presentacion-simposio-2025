@@ -1,4 +1,11 @@
 /* Estilos generales */
+.reveal {
+    background:
+            linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,1.0)),
+            url('/images/fondo-presentacion.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
 .title-part1 { color: #4ecdc4; } /* Verde azulado para "Pensar como arquitecto" */
 .title-part2 { color: #ff6b6b; } /* Rojo suave para "construir como aprendiz" */
 
